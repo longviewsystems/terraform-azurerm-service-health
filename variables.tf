@@ -9,10 +9,11 @@ variable "email_address" {
 }
 
 variable "tags" {
-  type = map(string)
+  type        = map(string)
+  description = "value of the tags"
 }
 
 variable "subscription_id" {
   type        = list(string)
-  description = "value of the subscription id"
+  description = "List of the subscription ids for scope"
 }
