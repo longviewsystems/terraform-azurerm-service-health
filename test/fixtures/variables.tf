@@ -1,13 +1,24 @@
 variable "location" {
   type        = string
-  description = "value of the location"
+  description = "location"
 }
 
 variable "email_address" {
   type        = string
-  description = "value of the email address"
+  description = "Recipient email address"
+}
+
+variable "service_health_activity_log_alert_name" {
+  type        = string
+  description = "Name of the service alert"
+}
+
+variable "action_group_name" {
+  type        = string
+  description = "Name of the action group"
 }
 
 variable "tags" {
-  type = map(string)
+  type        = map(string)
+  description = "value of the tags"
 }

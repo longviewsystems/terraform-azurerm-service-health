@@ -27,10 +27,13 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_email_address"></a> [email\_address](#input\_email\_address) | value of the email address | `string` | n/a | yes |
-| <a name="input_location"></a> [location](#input\_location) | value of the location | `string` | n/a | yes |
-| <a name="input_subscription_id"></a> [subscription\_id](#input\_subscription\_id) | value of the subscription id | `list(string)` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(string)` | n/a | yes |
+| <a name="input_action_group_name"></a> [action\_group\_name](#input\_action\_group\_name) | Name of the action group | `string` | n/a | yes |
+| <a name="input_email_address"></a> [email\_address](#input\_email\_address) | Recipient email address | `string` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | location | `string` | n/a | yes |
+| <a name="input_scope_subscription_id"></a> [scope\_subscription\_id](#input\_scope\_subscription\_id) | List of the subscription ids for scope | `list(string)` | n/a | yes |
+| <a name="input_service_health_activity_log_alert_name"></a> [service\_health\_activity\_log\_alert\_name](#input\_service\_health\_activity\_log\_alert\_name) | Name of the service alert | `string` | n/a | yes |
+| <a name="input_service_health_resource_group_name"></a> [service\_health\_resource\_group\_name](#input\_service\_health\_resource\_group\_name) | Name of the resource group for service health | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Tags | `map(string)` | n/a | yes |
 
 ## Outputs
 

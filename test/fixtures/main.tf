@@ -6,7 +6,7 @@ data "azurerm_subscription" "current" {}
 module "naming" {
   source  = "Azure/naming/azurerm"
   version = "0.3.0"
-  prefix  = ["terratest-monitoring"]
+  suffix  = ["terratest-monitoring"]
 }
 
 /***************************************************************/
@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "service_health" {
 }
 
 resource "azurerm_monitor_action_group" "action_group" {
-  name                = "service-health-alert-action-group"
+  name                = var.action_group_name
   resource_group_name = azurerm_resource_group.service_health.name
   short_name          = "svchlactgrp"
 
@@ -33,15 +33,14 @@ resource "azurerm_monitor_action_group" "action_group" {
 }
 
 resource "azurerm_monitor_activity_log_alert" "service_health_alert" {
-  name                = "service-health-alert-name"
+  name                = var.service_health_activity_log_alert_name
   resource_group_name = azurerm_resource_group.service_health.name
-  scopes              = [data.azurerm_subscription.current.id]
-  enabled             = true
+  scopes              = [data.azurerm_subscription.current.id] # Must be a list
 
   criteria {
     category = "ServiceHealth"
     service_health {
-      #services = "AppService"
+
     }
   }
 

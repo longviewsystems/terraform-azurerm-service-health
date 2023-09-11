@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "service_health" {
-  name     = "rg-service-health"
+  name     = var.service_health_resource_group_name
   location = var.location
 }
 
 resource "azurerm_monitor_action_group" "action_group" {
-  name                = "example-actiongroup"
+  name                = var.action_group_name
   resource_group_name = azurerm_resource_group.service_health.name
   short_name          = "svchlactgrp"
 
@@ -18,20 +18,13 @@ resource "azurerm_monitor_action_group" "action_group" {
 }
 
 resource "azurerm_monitor_activity_log_alert" "service_health_alert" {
-  name                = "service-health-alert"
+  name                = var.service_health_activity_log_alert_name
   resource_group_name = azurerm_resource_group.service_health.name
-  scopes              = var.subscription_id
-  enabled             = true
-
+  scopes              = var.scope_subscription_id
   criteria {
     category = "ServiceHealth"
-    enabled  = true
-
-    all_of {
-      level = "Error"
-    }
     service_health {
-      #service = "AppService"
+
     }
   }
 
