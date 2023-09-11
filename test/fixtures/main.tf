@@ -8,18 +8,13 @@ module "naming" {
   version = "0.3.0"
   prefix  = ["terratest-monitoring"]
 }
-resource "azurerm_resource_group" "resource_group" {
-  name     = module.naming.resource_group.name
-  location = var.location
-}
-
 
 /***************************************************************/
 /*** Resources to be tested
 /***************************************************************/
 
 resource "azurerm_resource_group" "service_health" {
-  name     = module.naming.resource_group.name
+  name     = module.naming.resource_group.name_unique
   location = var.location
 }
 
