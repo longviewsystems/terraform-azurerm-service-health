@@ -22,3 +22,12 @@ variable "tags" {
   type        = map(string)
   description = "value of the tags"
 }
+variable "service_health_locations" {
+  type        = list(string)
+  description = "List of the locations for service health"
+}
+
+variable "service_health_events" {
+  type        = list(string)
+  description = "Service health event"
+}

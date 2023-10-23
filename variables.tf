@@ -3,11 +3,6 @@ variable "location" {
   description = "location"
 }
 
-variable "service_health_resource_group_name" {
-  type        = string
-  description = "Name of the resource group for service health"
-}
-
 variable "email_address" {
   type        = string
   description = "Recipient email address"
@@ -18,11 +13,6 @@ variable "service_health_activity_log_alert_name" {
   description = "Name of the service alert"
 }
 
-variable "action_group_name" {
-  type        = string
-  description = "Name of the action group"
-}
-
 variable "tags" {
   type        = map(string)
   description = "Tags"
@@ -31,4 +21,24 @@ variable "tags" {
 variable "scope_subscription_id" {
   type        = list(string)
   description = "List of the subscription ids for scope"
+}
+
+variable "action_group_id" {
+  type        = string
+  description = "Action group id"
+}
+
+variable "service_health_resource_group" {
+  type        = string
+  description = "Name of the resource group for service health"
+}
+
+variable "service_health_locations" {
+  type        = list(string)
+  description = "List of the locations for service health"
+}
+
+variable "service_health_events" {
+  type        = list(string)
+  description = "Service health event"
 }
