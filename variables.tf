@@ -1,13 +1,3 @@
-variable "location" {
-  type        = string
-  description = "location"
-}
-
-variable "email_address" {
-  type        = string
-  description = "Recipient email address"
-}
-
 variable "service_health_activity_log_alert_name" {
   type        = string
   description = "Name of the service alert"
