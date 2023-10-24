@@ -26,9 +26,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_action_group_id"></a> [action\_group\_id](#input\_action\_group\_id) | Action group id | `string` | n/a | yes |
-| <a name="input_email_address"></a> [email\_address](#input\_email\_address) | Recipient email address | `string` | n/a | yes |
-| <a name="input_location"></a> [location](#input\_location) | location | `string` | n/a | yes |
-| <a name="input_scope_subscription_id"></a> [scope\_subscription\_id](#input\_scope\_subscription\_id) | List of the subscription ids for scope | `list(string)` | n/a | yes |
+| <a name="input_scope_subscription_id"></a> [scope\_subscription\_id](#input\_scope\_subscription\_id) | List of the subscription ids (resource Ids) for scope | `list(string)` | n/a | yes |
 | <a name="input_service_health_activity_log_alert_name"></a> [service\_health\_activity\_log\_alert\_name](#input\_service\_health\_activity\_log\_alert\_name) | Name of the service alert | `string` | n/a | yes |
 | <a name="input_service_health_events"></a> [service\_health\_events](#input\_service\_health\_events) | Service health event | `list(string)` | n/a | yes |
 | <a name="input_service_health_locations"></a> [service\_health\_locations](#input\_service\_health\_locations) | List of the locations for service health | `list(string)` | n/a | yes |

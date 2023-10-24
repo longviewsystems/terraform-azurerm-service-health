@@ -10,7 +10,7 @@ variable "tags" {
 
 variable "scope_subscription_id" {
   type        = list(string)
-  description = "List of the subscription ids for scope"
+  description = "List of the subscription ids (resource Ids) for scope"
 }
 
 variable "action_group_id" {
