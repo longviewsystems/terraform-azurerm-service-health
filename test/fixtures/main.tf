@@ -40,7 +40,8 @@ resource "azurerm_monitor_activity_log_alert" "service_health_alert" {
   criteria {
     category = "ServiceHealth"
     service_health {
-
+      events    = var.service_health_events
+      locations = var.service_health_locations
     }
   }
 
